@@ -15,7 +15,6 @@ pipelines:
                     command: ls
                     arguments:
                       - .
-pipelines:
   Aob-handsome: 
     group: Gotham todo
     materials:
