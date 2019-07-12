@@ -28,7 +28,7 @@ pipelines:
               tasks:
                 - exec:
                     command: bash
-                    arguments: ./apply-infrastructure.sh
+                    arguments: ./gotham-todo/apply-infrastructure.sh
                       - .
 
       - build:
@@ -37,7 +37,7 @@ pipelines:
               tasks:
                 - exec:
                     command: bash
-                    arguments: ./build.sh
+                    arguments: ./gotham-todo/build.sh
                       - .
 
       - copy:
@@ -46,5 +46,5 @@ pipelines:
               tasks:
                 - exec:
                     command: bash
-                    arguments: ./copy-static-files.sh
+                    arguments: ./gotham-todo/copy-static-files.sh
                       - .
