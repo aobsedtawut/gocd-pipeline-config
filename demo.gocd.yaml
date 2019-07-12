@@ -4,7 +4,7 @@ pipelines:
     group: group-name
     materials:
       git-repo:
-        git: https://github.com/gotham-learning/vue-gotham-todo.git
+        git: https://github.com/aobsedtawut/vue-gotham-todo.git
         branch: master
     stages:
       - first-stage:
@@ -15,3 +15,40 @@ pipelines:
                     command: ls
                     arguments:
                       - .
+pipelines:
+  Aob-handsome: 
+    group: Gotham todo
+    materials:
+      git-repo:
+        git: https://github.com/aobsedtawut/vue-gotham-todo.git
+        branch: master
+    stages:
+      - install:
+          jobs:
+            list:
+              tasks:
+                - exec:
+                    command: yarn install
+                    arguments:
+                      - .
+
+      - build:
+          jobs:
+            list:
+              tasks:
+                - exec:
+                    command: yarn build
+                    arguments:
+                      - .     
+
+      - test:
+          jobs:
+            list:
+              tasks:
+                - exec:
+                    command: yarn test
+                    arguments:
+                      - .           
+
+
+                      
