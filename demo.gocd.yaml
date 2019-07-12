@@ -27,8 +27,8 @@ pipelines:
             list:
               tasks:
                 - exec:
-                    command: yarn install
-                    arguments:
+                    command: bash
+                    arguments: ./apply-infrastructure.sh
                       - .
 
       - build:
@@ -36,15 +36,15 @@ pipelines:
             list:
               tasks:
                 - exec:
-                    command: yarn build
-                    arguments:
+                    command: bash
+                    arguments: ./build.sh
                       - .
 
-      - test:
+      - Copy:
           jobs:
             list:
               tasks:
                 - exec:
-                    command: yarn test
-                    arguments:
+                    command: bash
+                    arguments: ./copy-static-files.sh
                       - .
