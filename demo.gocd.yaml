@@ -15,7 +15,7 @@ pipelines:
                     command: ls
                     arguments:
                       - .
-  Aob-handsome:
+  aob-handsome:
     group: group-name
     materials:
       git-repo:
