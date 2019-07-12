@@ -40,7 +40,7 @@ pipelines:
                     arguments: ./build.sh
                       - .
 
-      - Copy:
+      - copy:
           jobs:
             list:
               tasks:
