@@ -34,10 +34,6 @@ pipelines:
               tasks:
                 - exec:
                     command: ./gotham-todo/build.sh
-      - copy:
-          jobs:
-            list:
-              tasks:
                 - exec:
                     command: ./gotham-todo/copy-static-files.sh
-               
+      
