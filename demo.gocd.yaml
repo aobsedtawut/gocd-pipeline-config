@@ -15,8 +15,8 @@ pipelines:
                     command: ls
                     arguments:
                       - .
-  Aob-handsome: 
-    group: Gotham todo
+  Aob-handsome:
+    group: group-name
     materials:
       git-repo:
         git: https://github.com/aobsedtawut/vue-gotham-todo.git
@@ -38,7 +38,7 @@ pipelines:
                 - exec:
                     command: yarn build
                     arguments:
-                      - .     
+                      - .
 
       - test:
           jobs:
@@ -47,7 +47,4 @@ pipelines:
                 - exec:
                     command: yarn test
                     arguments:
-                      - .           
-
-
-                      
+                      - .
